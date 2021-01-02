@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+</head>
+
+<body>
+    <h1>Ini Judul halaman Form</h1>
+    <hr />
+    <h2>ini merupakan paragraf pertama</h2>
+    <ol>
+        <li><a href="index.html" title="Menuju ke halaman utama">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html" target="_blank">Contact (new tab)</a></li>
+    </ol>
+    <hr>
+    <h2>Link lain</h2>
+    <p>
+        <a href="wp.jpg">Download wallpapper &copy; mikaelgustafsson.artstation.com</a> |
+        <a href="table.html" style="color:red">Table</a> |
+        <a href="form.html" style="color: orange;">Form</a> |
+        <a href="#" style="color: green;">3</a> |
+    </p>
+    <hr>
+
+    <form action="index.html" method="get">
+        <fieldset>
+            <legend>Isi Data</legend>
+            <p>
+                <label>Nama :</label>
+                <input type="text" name="nama" placeholder="isi nama mu">
+            </p>
+            <p>
+                <label>Kelas :</label>
+                <input type="text" name="kelas" placeholder="isi kelas mu">
+            </p>
+                <label>NPM :</label>
+                <input type="number" name="npm" placeholder="isi NPM mu">
+            </p>
+            <p>
+                <label>Tanggal Lahir</label>
+                <input type="date" name="tlahir">
+            </p>
+            <p>
+                <label>Username :</label>
+                <input type="text" name="username" placeholder="isi username mu">
+            </p>
+            <p>
+                <label>Email :</label>
+                <input type="email" name="email" placeholder="isi email mu">
+            </p>
+            <p>
+                <label>Password:</label>
+                <input type="password" name="password" placeholder="Passowrd..." />
+            </p>
+            <p>
+                <label for="Jenis Kelamin"></label>
+                <label><input type="radio" name="jkel" value="Pria">Pria</label>
+                <label><input type="radio" name="jkel" value="Wanita">Wanita</label>
+            </p>
+            <p>
+                <label for="Tingkat Kelas">Pilih Tingkat Kelas</label>
+                <select name="tkls">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                </select>
+            </p>
+            <p>
+                <label>Alamat Web</label>
+                <input type="url" name="webnya" placeholder="alamat web mu jika ada">
+            </p>
+            <p>
+                <label>Biografi</label>
+                <br>
+                <textarea name="bio" cols="50" rows="10"></textarea>
+            </p>
+            <p>
+                <input type="submit" name="submit" value="Kirim">
+            </p>
+        </fieldset>
+    </form>
+
+</body>
+
+</html>
