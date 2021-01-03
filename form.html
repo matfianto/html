@@ -37,40 +37,41 @@
         <fieldset>
             <legend>Isi Data</legend>
             <p>
-                <label>Nama :</label>
-                <input type="text" name="nama" placeholder="isi nama mu">
+                <!-- for="namaID" berfungsi untuk menyatakan bahwa label tersebut merujuk pada input yang memiliki ID nya-->
+                <label for="nama">Nama :</label>
+                <input type="text" id="nama" placeholder="isi nama mu">
             </p>
             <p>
-                <label>Kelas :</label>
-                <input type="text" name="kelas" placeholder="isi kelas mu">
+                <label for="kelas">Kelas :</label>
+                <input type="text" id="kelas" placeholder="isi kelas mu">
             </p>
-                <label>NPM :</label>
-                <input type="number" name="npm" placeholder="isi NPM mu">
-            </p>
-            <p>
-                <label>Tanggal Lahir</label>
-                <input type="date" name="tlahir">
+                <label for="npm">NPM :</label>
+                <input type="number" id="npm" placeholder="isi NPM mu">
             </p>
             <p>
-                <label>Username :</label>
-                <input type="text" name="username" placeholder="isi username mu">
+                <label for="tlahir">Tanggal Lahir</label>
+                <input type="date" id="tlahir">
             </p>
             <p>
-                <label>Email :</label>
-                <input type="email" name="email" placeholder="isi email mu">
+                <label for="username">Username :</label>
+                <input type="text" id="username" placeholder="isi username mu">
             </p>
             <p>
-                <label>Password  :</label>
-                <input type="password" name="password" placeholder="Passowrd..." />
+                <label for="email">Email :</label>
+                <input type="email" id="email" placeholder="isi email mu">
+            </p>
+            <p>
+                <label for="password">Password  :</label>
+                <input type="password" id="password" placeholder="Passowrd..." />
             </p>
             <p>
                 <label>Jenis Kelamin</label>
-                <label><input type="radio" name="jkel" value="Pria">Pria</label>
-                <label><input type="radio" name="jkel" value="Wanita">Wanita</label>
+                <input type="radio" id="pria" name="jkel"><label for="pria">Pria</label>
+                <input type="radio" id="wanita" name="jkel"><label for="wanita">Wanita</label>
             </p>
             <p>
-                <label for="Tingkat Kelas">Pilih Tingkat Kelas</label>
-                <select name="tkls">
+                <label for="tkls">Pilih Tingkat Kelas</label>
+                <select id="tkls">
                     <option value="1">1</option>
                     <option value="2">2</option>
                     <option value="3">3</option>
@@ -78,13 +79,13 @@
                 </select>
             </p>
             <p>
-                <label>Alamat Web</label>
-                <input type="url" name="webnya" placeholder="alamat web mu jika ada">
+                <label for="webnya">Alamat Web</label>
+                <input type="url" id="webnya" placeholder="alamat web mu jika ada">
             </p>
             <p>
-                <label>Biografi</label>
+                <label for="bio">Biografi</label>
                 <br>
-                <textarea name="bio" cols="50" rows="10"></textarea>
+                <textarea id="bio" cols="50" rows="10"></textarea>
             </p>
             <p>
                 <input type="submit" name="submit" value="Kirim">
