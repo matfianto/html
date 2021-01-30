@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Ujian IMK</title>
+    <style>
+        #isi {
+            float: left;
+        }
+
+        form {
+            background: tomato;
+        }
+
+        td {
+            color: white;
+        }
+
+        .footer {
+            position: fixed;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            background-color: rgb(250, 217, 156);
+            color: rgb(0, 0, 0);
+            text-align: center;
+        }
+    </style>
+
+    <script>
+        function showInput() {
+            debugger
+            var nisn = document.getElementById("nisn").value;
+            var nis = document.getElementById("nis").value;
+            var nama = document.getElementById("nama").value;
+            var alamat = document.getElementById("alamat").value;
+
+            document.getElementById("tampil_nisn").innerHTML = nisn;
+            document.getElementById("tampil_nis").innerHTML = nis;
+            document.getElementById("tampil_nama").innerHTML = nama;
+            document.getElementById("tampil_alamat").innerHTML = alamat;
+        }
+
+        function displayRadioValue() {
+            var ele = document.getElementsByName('gender');
+
+            for (i = 0; i < ele.length; i++) {
+                if (ele[i].checked)
+                    document.getElementById("result").innerHTML = ele[i].value;
+            }
+        }
+
+        function deleteField() {
+            document.getElementById("nisn").value = "";
+            document.getElementById("nis").value = "";
+            document.getElementById("nama").value = "";
+            document.getElementById("alamat").value = "";
+            document.getElementsByName('gender').value = "";
+
+            document.getElementById("tampil_nisn").innerHTML = "";
+            document.getElementById("tampil_nis").innerHTML = "";
+            document.getElementById("tampil_nama").innerHTML = "";
+            document.getElementById("tampil_alamat").innerHTML = "";
+            document.getElementById("result").innerHTML = "";
+        }
+    </script>
+</head>
+
+<body>
+    <h1>Pendaftaran Mahasiswa Baru</h1>
+    <div id="isi">
+        <form>
+            <table width=500>
+                <tr>
+                    <td>NISN</td>
+                    <td>:</td>
+                    <td> <input type="number" name="username" id="nisn" /></td>
+                </tr>
+                <tr>
+                    <td>NIS</td>
+                    <td>:</td>
+                    <td> <input type="number" name="password" id="nis" /></td>
+                </tr>
+                <tr>
+                    <td>Nama Lengkap</td>
+                    <td>:</td>
+                    <td> <input type="name" name="password" id="nama" /></td>
+                </tr>
+                <tr>
+                    <td>Alamat</td>
+                    <td>:</td>
+                    <td> <input type="name" name="password" id="alamat" /></td>
+                </tr>
+                <tr>
+                    <td><br></td>
+                </tr>
+                <tr>
+                    <td>Jenis Kelamin</td>
+                    <td>:</td>
+                    <td>
+                        <input type="radio" id="male" name="gender" value="Laki-Laki"><label
+                            for="male">Laki-Laki</label>
+                        <input type="radio" id="female" name="gender" value="Perempuan"><label
+                            for="female">Perempuan</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td><br></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td>
+                        <input type="button" id="input" value="Input" onclick="showInput();displayRadioValue()" />
+                        <input type="button" id="delete" value="Delete" onclick="deleteField()" />
+                    </td>
+                </tr>
+            </table>
+        </form>
+        <p><span id='tampil_nisn'></span></p>
+        <p><span id='tampil_nis'></span></p>
+        <p><span id='tampil_nama'></span></p>
+        <p><span id='tampil_alamat'></span></p>
+        <p><span id='result'></span></p>
+        <br>
+        <p><a href="ujian.html">Back to Previouse Page</a></p>
+    </div>
+    <div class="footer">
+        <p>&copy; 2021 | <a href="ujian.html">Back to Previouse Page</a></p>
+    </div>
+</body>
+
+</html>
+
+<!-- "the result appears briefly then disappears."
+
+Try using input type="button" rather than input type="submit".
+OR Else ( while using input type="submit" ) avoid form submission, 
+by returning false in function total() and put onclick="return total( )". -->
